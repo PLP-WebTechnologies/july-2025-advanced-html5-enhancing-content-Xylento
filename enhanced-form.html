@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enhanced HTML5 Content and Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 20px auto;
+      line-height: 1.6;
+      padding: 0 15px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    legend {
+      font-weight: bold;
+      padding: 0 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+    .inline-label {
+      display: inline-block;
+      margin-right: 15px;
+      font-weight: normal;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Enhancing HTML5 Content & Mastering Forms</h1>
+
+  <section>
+    <h2>1. Lists and Tables</h2>
+
+    <h3>Unordered List of Features</h3>
+    <ul>
+      <li>Semantic HTML5 usage</li>
+      <li>Form validation without JavaScript</li>
+      <li>Accessible form elements</li>
+    </ul>
+
+    <h3>Ordered List of Steps</h3>
+    <ol>
+      <li>Design page layout with sections</li>
+      <li>Embed media content</li>
+      <li>Create structured forms with validation</li>
+    </ol>
+
+    <h3>Sample Table: Web Browser Comparison</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Browser</th>
+          <th>Rendering Engine</th>
+          <th>Supports HTML5</th>
+          <th>Latest Version</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Chrome</td>
+          <td>Blink</td>
+          <td>Yes</td>
+          <td>114</td>
+        </tr>
+        <tr>
+          <td>Firefox</td>
+          <td>Gecko</td>
+          <td>Yes</td>
+          <td>115</td>
+        </tr>
+        <tr>
+          <td>Safari</td>
+          <td>WebKit</td>
+          <td>Yes</td>
+          <td>16</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>2. Embedded Media</h2>
+    <figure>
+      <img src="https://via.placeholder.com/600x200" alt="Sample placeholder image" />
+      <figcaption>An example image to demonstrate media embedding.</figcaption>
+    </figure>
+
+    <audio controls>
+      <source src="sample-audio.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <video width="320" height="240" controls>
+      <source src="sample-video.mp4" type="video/mp4" />
+      Your browser does not support the video element.
+    </video>
+  </section>
+
+  <section>
+    <h2>3. User Registration Form</h2>
+    <form action="#" method="post" novalidate>
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3" />
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="email" />
+
+        <label for="dob">Date of Birth *</label>
+        <input type="date" id="dob" name="dob" required />
+
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password" placeholder="At least 8 characters" required minlength="8" />
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <label>Gender *</label>
+        <label class="inline-label">
+          <input type="radio" name="gender" value="male" required /> Male
+        </label>
+        <label class="inline-label">
+          <input type="radio" name="gender" value="female" /> Female
+        </label>
+        <label class="inline-label">
+          <input type="radio" name="gender" value="other" /> Other
+        </label>
+
+        <label for="country">Country *</label>
+        <select id="country" name="country" required>
+          <option value="" disabled selected>Select your country</option>
+          <option value="usa">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="canada">Canada</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label>
+          <input type="checkbox" name="newsletter" /> Subscribe to newsletter
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+
+        <label for="bio">Brief Bio</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..." maxlength="500"></textarea>
+
+        <label for="referral">How did you hear about us?</label>
+        <input type="text" id="referral" name="referral" placeholder="e.g., Friend, Online Ad" readonly value="Online Search" />
+      </fieldset>
+
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+</body>
+</html>
 
